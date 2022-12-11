@@ -1,0 +1,79 @@
+/* RESET */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  height: 10000px;
+}
+
+/* --------- */
+/* UTILITUES */
+/* --------- */
+.container {
+  max-width: 1300px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+/* ----------------- */
+/* HEADER and NAVBAR */
+/* ----------------- */
+.header__nav {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 0;
+}
+.header__nav__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 10px;
+}
+.header__nav__logo {
+  max-width: 140px;
+}
+.header__nav__logo > img {
+  width: 100%;
+}
+.header__nav__items {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  text-transform: capitalize;
+  color: white;
+}
+
+.header__content {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../images/header.jpg");
+  background-size: cover;
+  background-position: bottom center;
+  width: 100vw;
+}
+.header__content__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  text-align: center;
+}
+.header__content__welocome,
+.header__content__submaintitle {
+  font-size: 25px;
+  color: rgb(179, 179, 179);
+  margin-block: 50px;
+}
+.header__content__maintitle {
+  font-size: 60px;
+  color: white;
+  text-transform: capitalize;
+}
