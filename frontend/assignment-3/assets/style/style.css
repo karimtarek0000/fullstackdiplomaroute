@@ -6,6 +6,10 @@
   padding: 0;
 }
 
+:root {
+  --main-color: #8d7853;
+}
+
 body {
   font-family: sans-serif;
   height: 10000px;
@@ -18,6 +22,11 @@ body {
   max-width: 1300px;
   padding: 0 10px;
   margin: 0 auto;
+}
+
+.svg {
+  width: 15px;
+  height: 15px;
 }
 
 /* ----------------- */
@@ -35,7 +44,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-block: 10px;
+  padding-block: 15px;
 }
 .header__nav__logo {
   max-width: 140px;
@@ -76,4 +85,127 @@ body {
   font-size: 60px;
   color: white;
   text-transform: capitalize;
+}
+.header__content__actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.header__content__actions__button {
+  all: unset;
+  color: white;
+  padding: 15px 20px;
+  text-transform: capitalize;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.header__content__actions__button--learnmore {
+  background-color: var(--main-color);
+}
+.header__content__actions__button--contactus {
+  border: 1px solid white;
+}
+.header__content__actions__button:hover {
+  background-color: white;
+  color: black;
+}
+.header__content__scroll {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 34px;
+  height: 55px;
+  min-height: 55px;
+  border-radius: 50px;
+  margin-top: 130px;
+  border: 1px solid white;
+  overflow: hidden;
+}
+.header__content__scroll::after {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 10px;
+  background-color: white;
+  border-radius: 10px;
+  animation: scroll 3s infinite ease-in-out;
+  will-change: animation;
+}
+
+/* ANIMATIONS */
+@keyframes scroll {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.5;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-15px);
+    opacity: 0;
+  }
+}
+
+/* ----------------------- */
+/* SECTION 1 => WHO WE ARE */
+/* ----------------------- */
+.who-we-you {
+  background-color: white;
+}
+.who-we-you__wrapper {
+  display: flex;
+  height: 100vh;
+}
+.who-we-you__wrapper > * {
+  flex-basis: calc(100% / 2);
+}
+.who-we-you__image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.who-we-you__image img {
+  max-width: 90%;
+}
+.who-we-you__content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-inline-start: 15px;
+}
+.who-we-you__content__title {
+  text-transform: capitalize;
+  margin-bottom: 30px;
+  font-size: 30px;
+}
+.who-we-you__content__description {
+  color: var(--main-color);
+  font-size: 17px;
+  line-height: calc(17px * 1.6);
+}
+.who-we-you__content__features {
+  margin-top: 20px;
+}
+.who-we-you__content__features__feature {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--main-color);
+  margin-bottom: 15px;
+}
+.who-we-you__content__features__feature__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.3);
 }
