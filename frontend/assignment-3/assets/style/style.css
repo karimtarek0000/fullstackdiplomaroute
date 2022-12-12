@@ -8,6 +8,11 @@
 
 :root {
   --main-color: #8d7853;
+  --secondary-color: #f8f8f8;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -158,34 +163,41 @@ body {
 .who-we-you {
   background-color: white;
 }
-.who-we-you__wrapper {
+.who-we-you__wrapper,
+.our-location__wrapper {
   display: flex;
   height: 100vh;
 }
-.who-we-you__wrapper > * {
+.who-we-you__wrapper > *,
+.our-location__wrapper > * {
   flex-basis: calc(100% / 2);
 }
-.who-we-you__image {
+.who-we-you__image,
+.our-location__image {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.who-we-you__image img {
+.who-we-you__image img,
+.our-location__image img {
   max-width: 90%;
 }
-.who-we-you__content {
+.who-we-you__content,
+.our-location__content {
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding-inline-start: 15px;
 }
-.who-we-you__content__title {
+.who-we-you__content__title,
+.our-location__content__title {
   text-transform: capitalize;
   margin-bottom: 30px;
   font-size: 30px;
 }
-.who-we-you__content__description {
+.who-we-you__content__description,
+.our-location__content__description {
   color: var(--main-color);
   font-size: 17px;
   line-height: calc(17px * 1.6);
@@ -208,4 +220,20 @@ body {
   height: 35px;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+/* ------------------------- */
+/* SECTION 2 => OUR LOCATION */
+/* ------------------------- */
+.our-location {
+  background-color: var(--secondary-color);
+}
+.our-location__image {
+  order: 1;
+}
+.our-location__content {
+  order: 0;
+}
+.our-location__content__description:first-of-type {
+  margin-bottom: 30px;
 }
