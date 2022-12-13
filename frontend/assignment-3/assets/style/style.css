@@ -157,24 +157,6 @@ body {
   will-change: animation;
 }
 
-/* ANIMATIONS */
-@keyframes scroll {
-  0% {
-    transform: translateY(30px);
-    opacity: 0;
-  }
-  30% {
-    opacity: 0.5;
-  }
-  60% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-15px);
-    opacity: 0;
-  }
-}
-
 /* ----------------------- */
 /* SECTION 1 => WHO WE ARE */
 /* ----------------------- */
@@ -256,6 +238,50 @@ body {
   margin-bottom: 30px;
 }
 
+/* ----------------------- */
+/* SECTION 3 => OUR BAKING */
+/* ----------------------- */
+.our-baking {
+  background-color: white;
+}
+.our-baking__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+}
+.our-baking__header {
+  text-align: center;
+}
+.our-backing__header__title {
+  margin-bottom: 30px;
+  text-transform: capitalize;
+  font-size: 30px;
+}
+.our-backing__header__description {
+  color: var(--main-color);
+}
+.our-baking__cards {
+  display: flex;
+  justify-content: space-between;
+}
+.our-baking__cards__card {
+  text-align: center;
+  margin-top: 50px;
+  flex-basis: calc(92% / 3);
+}
+.our-baking__cards__card__img img {
+  max-width: 100%;
+}
+.our-baking__cards__card__content__title {
+  margin-block: 15px;
+}
+.our-baking__cards__card__content__description {
+  font-size: 17px;
+  line-height: calc(17px * 1.5);
+  color: var(--main-color);
+}
+
 /* ------------ */
 /* USER ACTIONS */
 /* ------------ */
@@ -305,4 +331,24 @@ body {
 .user__action:hover::after {
   opacity: 1;
   visibility: visible;
+}
+
+/* ---------- */
+/* ANIMATIONS */
+/* ---------- */
+@keyframes scroll {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.5;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-15px);
+    opacity: 0;
+  }
 }
