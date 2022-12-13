@@ -64,6 +64,23 @@ body {
   text-transform: capitalize;
   color: white;
 }
+.header__nav__items__item {
+  position: relative;
+  transition: all 0.3s ease;
+}
+.header__nav__items__item:hover {
+  cursor: pointer;
+  color: var(--main-color);
+}
+.header__nav__items__item--active::after {
+  content: "";
+  position: absolute;
+  top: -25px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: var(--main-color);
+}
 
 .header__content {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
@@ -267,7 +284,7 @@ body {
   padding-top: 5px;
 }
 .user__action::after {
-  content: attr(data-text);
+  content: attr(data-hint);
   position: absolute;
   display: block;
   top: 50%;
