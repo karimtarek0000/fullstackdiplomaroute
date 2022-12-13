@@ -72,6 +72,9 @@ body {
   cursor: pointer;
   color: var(--main-color);
 }
+.header__nav__items__item--active {
+  color: var(--main-color);
+}
 .header__nav__items__item--active::after {
   content: "";
   position: absolute;
