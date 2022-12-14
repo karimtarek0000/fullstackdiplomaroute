@@ -46,26 +46,29 @@ body {
   height: 0;
 }
 .header__nav__wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   padding-block: 15px;
+  list-style: auto;
 }
 .header__nav__logo {
+  display: inline-block;
   max-width: 140px;
+  vertical-align: middle;
 }
 .header__nav__logo > img {
   width: 100%;
 }
 .header__nav__items {
-  display: flex;
-  gap: 30px;
+  display: inline-block;
   list-style: none;
   text-transform: capitalize;
   color: white;
+  width: calc(99% - 140px);
+  text-align: right;
 }
 .header__nav__items__item {
+  display: inline-block;
   position: relative;
+  margin-inline-start: 17px;
   transition: all 0.3s ease;
 }
 .header__nav__items__item__link {
@@ -90,18 +93,17 @@ body {
 }
 
 .header__content {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url("../images/header.jpg");
   background-size: cover;
   background-position: bottom center;
   width: 100vw;
+  height: 100vh;
 }
 .header__content__wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  height: 100vh;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
   text-align: center;
 }
 .header__content__welocome,
@@ -113,12 +115,10 @@ body {
 .header__content__maintitle {
   font-size: 60px;
   color: white;
+  margin-top: 20px;
   text-transform: capitalize;
 }
 .header__content__actions {
-  display: flex;
-  align-items: center;
-  gap: 10px;
   margin-top: 10px;
 }
 .header__content__actions__button {
@@ -129,6 +129,9 @@ body {
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.3s ease;
+}
+.header__content__actions__button:first-of-type {
+  margin-inline-end: 10px;
 }
 .header__content__actions__button--learnmore {
   background-color: var(--main-color);
@@ -149,8 +152,9 @@ body {
   height: 55px;
   min-height: 55px;
   border-radius: 50px;
-  margin-top: 100px;
   border: 1px solid white;
+  margin-top: 80px;
+  margin-inline: auto;
   overflow: hidden;
 }
 .header__content__scroll::after {
@@ -168,22 +172,25 @@ body {
 /* SECTION 1 => WHO WE ARE */
 /* ----------------------- */
 .who-we-are {
+  /* background-color: red; */
   background-color: white;
 }
 .who-we-are__wrapper,
 .our-location__wrapper {
-  display: flex;
   height: 100vh;
 }
 .who-we-are__wrapper > *,
 .our-location__wrapper > * {
-  flex-basis: calc(100% / 2);
+  display: inline-block;
+  width: calc(98% / 2);
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .who-we-are__image,
 .our-location__image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
+  vertical-align: top;
 }
 .who-we-are__image img,
 .our-location__image img {
@@ -191,10 +198,6 @@ body {
 }
 .who-we-are__content,
 .our-location__content {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   padding-inline-start: 15px;
 }
 .who-we-are__content__title,
@@ -202,31 +205,38 @@ body {
   text-transform: capitalize;
   margin-bottom: 30px;
   font-size: 30px;
+  text-align: center;
 }
 .who-we-are__content__description,
 .our-location__content__description {
   color: var(--main-color);
   font-size: 17px;
   line-height: calc(17px * 1.6);
+  text-align: center;
 }
 .who-we-are__content__features {
   margin-top: 20px;
 }
 .who-we-are__content__features__feature {
-  display: flex;
-  align-items: center;
-  gap: 10px;
   color: var(--main-color);
-  margin-bottom: 15px;
+  margin-bottom: 10px;
+}
+.who-we-are__content__features__feature > * {
+  display: inline-block;
 }
 .who-we-are__content__features__feature__icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 35px;
   height: 35px;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.3);
+  text-align: center;
+  vertical-align: middle;
+  margin-inline-end: 6px;
+}
+.who-we-are__content__features__feature__icon svg {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 /* ------------------------- */
