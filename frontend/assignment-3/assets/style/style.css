@@ -68,14 +68,18 @@ body {
   position: relative;
   transition: all 0.3s ease;
 }
+.header__nav__items__item__link {
+  text-decoration: none;
+  color: white;
+}
 .header__nav__items__item:hover {
   cursor: pointer;
   color: var(--main-color);
 }
-.header__nav__items__item--active {
+.header__nav__items__item__link--active {
   color: var(--main-color);
 }
-.header__nav__items__item--active::after {
+.header__nav__items__item__link--active::after {
   content: "";
   position: absolute;
   top: -25px;
