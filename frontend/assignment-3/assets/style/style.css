@@ -176,11 +176,13 @@ body {
   background-color: white;
 }
 .who-we-are__wrapper,
-.our-location__wrapper {
+.our-location__wrapper,
+.contact-info__wrapper {
   height: 100vh;
 }
 .who-we-are__wrapper > *,
-.our-location__wrapper > * {
+.our-location__wrapper > *,
+.contact-info__wrapper > * {
   display: inline-block;
   width: calc(98% / 2);
   position: relative;
@@ -188,7 +190,8 @@ body {
   transform: translateY(-50%);
 }
 .who-we-are__image,
-.our-location__image {
+.our-location__image,
+.contact-info__map {
   text-align: center;
   vertical-align: top;
 }
@@ -197,18 +200,21 @@ body {
   max-width: 90%;
 }
 .who-we-are__content,
-.our-location__content {
+.our-location__content,
+.contact-info__content {
   padding-inline-start: 15px;
 }
 .who-we-are__content__title,
-.our-location__content__title {
+.our-location__content__title,
+.contact-info__content__title {
   text-transform: capitalize;
   margin-bottom: 30px;
   font-size: 30px;
   text-align: center;
 }
 .who-we-are__content__description,
-.our-location__content__description {
+.our-location__content__description,
+.contact-info__content__description {
   color: var(--main-color);
   font-size: 17px;
   line-height: calc(17px * 1.6);
@@ -294,6 +300,17 @@ body {
   font-size: 17px;
   line-height: calc(17px * 1.5);
   color: var(--main-color);
+}
+
+/* -------------------------------- */
+/* SECTION 4 => CONTACT INFORMATION */
+/* -------------------------------- */
+.contact-info {
+  background-color: var(--secondary-color);
+}
+
+.contact-info__map iframe {
+  max-width: 80%;
 }
 
 /* ------------ */
