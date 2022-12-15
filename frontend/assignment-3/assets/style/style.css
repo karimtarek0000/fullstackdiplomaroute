@@ -245,12 +245,6 @@ body {
 .our-location {
   background-color: var(--secondary-color);
 }
-.our-location__image {
-  order: 1;
-}
-.our-location__content {
-  order: 0;
-}
 .our-location__content__description:first-of-type {
   margin-bottom: 30px;
 }
@@ -260,12 +254,12 @@ body {
 /* ----------------------- */
 .our-baking {
   background-color: white;
+  height: 100vh;
 }
 .our-baking__wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100vh;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .our-baking__header {
   text-align: center;
@@ -279,13 +273,16 @@ body {
   color: var(--main-color);
 }
 .our-baking__cards {
-  display: flex;
-  justify-content: space-between;
+  overflow: hidden;
 }
 .our-baking__cards__card {
-  text-align: center;
+  float: left;
+  width: calc(94% / 3);
   margin-top: 50px;
-  flex-basis: calc(92% / 3);
+  text-align: center;
+}
+.our-baking__cards__card:nth-child(even) {
+  margin-inline: 3%;
 }
 .our-baking__cards__card__img img {
   max-width: 100%;
