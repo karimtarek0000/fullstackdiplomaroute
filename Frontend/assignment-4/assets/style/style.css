@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap");
+
+/* RESET */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+:root {
+  --main-color: #ff2f5b;
+  --secand-color: rgba(0, 0, 0, 0.688);
+}
+
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  height: 10000px;
+  overflow-x: hidden;
+}
+
+/* --------- */
+/* UTILITUES */
+/* --------- */
+.container {
+  max-width: 1200px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.svg {
+  width: 15px;
+  height: 15px;
+}
+
+/* ----------------- */
+/* HEADER and NAVBAR */
+/* ----------------- */
+.header__nav {
+  position: absolute;
+  display: block;
+  top: 0;
+  width: 100%;
+}
+.header__nav__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 15px;
+}
+.header__nav__logo {
+  max-width: 140px;
+  text-decoration: none;
+  color: var(--main-color);
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+.header__nav__items {
+  display: flex;
+  gap: 3rem;
+  list-style: none;
+  text-transform: capitalize;
+  color: white;
+}
+.header__nav__items__item {
+  position: relative;
+  font-size: 1.7rem;
+}
+.header__nav__items__item__link {
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease;
+}
+.header__nav__items__item__link:hover {
+  color: var(--main-color);
+}
+.header__nav__items__item__link--active {
+  color: var(--main-color);
+}
+
+.header__content {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("../images/slider/slider-01.jpg");
+  background-size: cover;
+  background-position: bottom center;
+}
+.header__content__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  text-align: center;
+}
+.header__content__welocome,
+.header__content__maintitle {
+  font-weight: 700;
+}
+.header__content__welocome,
+.header__content__submaintitle {
+  font-size: 2.5rem;
+  color: white;
+  font-weight: 600;
+}
+.header__content__maintitle {
+  font-size: 7rem;
+  color: var(--main-color);
+  text-transform: uppercase;
+  margin-block: 1rem;
+}
+
+/* ------------------ */
+/* SECTION 1 => ABOUT */
+/* ------------------ */
+.about {
+  /* background-color: red; */
+}
+.about__wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.about__wrapper > * {
+  flex-basis: 50%;
+}
+.about__image {
+  text-align: center;
+}
+.about__content {
+  padding-inline: 1rem;
+}
+.about__content__head {
+  font-size: 3.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+.about__content__head::first-letter {
+  color: var(--main-color);
+}
+.about__content__desc {
+  font-size: 1.7rem;
+  line-height: calc(1.7rem * 1.6);
+  color: var(--secand-color);
+  padding-bottom: 2rem;
+  margin-bottom: 2.2rem;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.303);
+}
+.about__content__otherinfo {
+  display: flex;
+  flex-flow: row wrap;
+}
+.about__content__otherinfo__info {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  flex: 0 1 50%;
+  font-size: 1.6rem;
+  text-transform: capitalize;
+  margin-bottom: 2rem;
+}
+.about__content__otherinfo__info h6 {
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+.about__content__otherinfo__info span {
+  color: var(--secand-color);
+}
+.about__content__otherinfo__info a {
+  color: var(--main-color);
+  text-decoration: none;
+}
+
+/* ---------- */
+/* RESPONSIVE */
+/* ---------- */
+@media (max-width: 992px) {
+  html {
+    font-size: 56.25%;
+  }
+  /* ------------------ */
+  /* SECTION 1 => ABOUT */
+  /* ------------------ */
+  .about__wrapper {
+    padding: 2rem;
+  }
+  .about__wrapper > * {
+    flex-basis: 100%;
+  }
+}
