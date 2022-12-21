@@ -77,9 +77,11 @@
       <section class="about">
         <div class="about__wrapper container">
           <!-- IMAGE -->
-          <figure class="about__image">
-            <img src="./assets/images/about/profile.jpg" alt="profile" />
-          </figure>
+          <div class="about__image__wrapper">
+            <figure class="about__image">
+              <img src="./assets/images/about/profile.jpg" alt="profile" />
+            </figure>
+          </div>
           <!-- CONTENT -->
           <div class="about__content">
             <h2 class="about__content__head">i hello,</h2>
@@ -92,6 +94,8 @@
               nulla pariatur. Excepteur sint occaecat cupidatat non proident,
               sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
+
+            <!-- START INFO -->
             <div class="about__content__otherinfo">
               <div class="about__content__otherinfo__info">
                 <h6>name:</h6>
@@ -118,10 +122,61 @@
                 <a href="#">Nadia420@gmail.com</a>
               </div>
             </div>
+            <!-- END INFO -->
+
+            <!-- START ACTIONS -->
+            <div class="about__content__actions">
+              <button class="about__content__actions__btn">
+                <span class="about__content__actions__btn__title"
+                  >download cv</span
+                >
+                <svg class="svg">
+                  <use href="./assets/icons/sprite.svg#down" />
+                </svg>
+              </button>
+              <button class="about__content__actions__btn">
+                <span class="about__content__actions__btn__title">hire me</span>
+                <svg class="svg">
+                  <use href="./assets/icons/sprite.svg#cv" />
+                </svg>
+              </button>
+            </div>
+            <!-- END ACTIONS -->
           </div>
         </div>
       </section>
       <!-- END ABOUT SECTION -->
+
+      <!-- START SERVICES SECTION -->
+      <section class="services">
+        <div class="services__wrapper container">
+          <!-- START HEAD -->
+          <div class="services__head">
+            <h2>our services</h2>
+            <span class="services__head__line" />
+          </div>
+          <!-- END HEAD -->
+
+          <!-- START CARDS -->
+          <div class="services__cards">
+            <div class="services__cards__card">
+              <figure class="services__cards__card__icon">
+                <svg class="svg">
+                  <use href="./assets/icons/sprite.svg#check" />
+                </svg>
+              </figure>
+              <h4>ui/ux design</h4>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Architecto hic quas mollitia provident eius blanditiis quis
+                libero ea facilis eligendi.
+              </p>
+            </div>
+          </div>
+          <!-- END CARDS -->
+        </div>
+      </section>
+      <!-- END SERVICES SECTION -->
     </main>
   </body>
 </html>
