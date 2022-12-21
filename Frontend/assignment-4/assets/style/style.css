@@ -14,6 +14,7 @@
   --secand-color: rgba(0, 0, 0, 0.688);
   --third-color: #ff2f5b;
   --fourth-color: #333333;
+  --fifth-color: #f1f1f1;
 }
 
 html {
@@ -45,6 +46,35 @@ body {
 button {
   all: unset;
   cursor: pointer;
+}
+ul {
+  list-style: none;
+}
+
+.line {
+  position: relative;
+  display: block;
+  width: 15rem;
+  height: 1px;
+  background-color: var(--third-color);
+  margin-inline: auto;
+  margin-block: 2rem;
+}
+.line::after,
+.line::before {
+  content: "";
+  position: absolute;
+  width: 7rem;
+  height: inherit;
+  background-color: inherit;
+  inset-inline-start: 50%;
+  transform: translateX(-50%);
+}
+.line::after {
+  top: -1rem;
+}
+.line::before {
+  top: 1rem;
 }
 
 /* ----------------- */
@@ -126,14 +156,13 @@ button {
 /* ------------------ */
 /* SECTION 1 => ABOUT */
 /* ------------------ */
-
 .about__wrapper {
   display: flex;
   flex-flow: row wrap;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  padding-block: 30px;
+  padding-block: 3rem;
+  min-height: 100vh;
 }
 .about__wrapper > * {
   flex: 0 0 50%;
@@ -221,54 +250,128 @@ button {
 /* SECTION 2 => SERVICES */
 /* --------------------- */
 .services {
-  background-color: #f1f1f1;
+  background-color: var(--fifth-color);
 }
-.services__wrapper {
-  padding-block: 2rem;
+.services__wrapper,
+.portfolio__wrapper,
+.count-services__wrapper {
+  padding-block: 7rem;
 }
-.services__head {
+.services__head,
+.portfolio__head {
   text-align: center;
   font-size: 3rem;
   text-transform: capitalize;
   color: var(--fourth-color);
 }
-.services__head__line {
-  position: relative;
-  display: block;
-  width: 15rem;
-  height: 1px;
-  background-color: var(--third-color);
-  margin-inline: auto;
-  margin-block: 2rem;
-}
-.services__head__line::after,
-.services__head__line::before {
-  content: "";
-  position: absolute;
-  width: 7rem;
-  height: inherit;
-  background-color: inherit;
-  inset-inline-start: 50%;
-  transform: translateX(-50%);
-}
-.services__head__line::after {
-  top: -1rem;
-}
-.services__head__line::before {
-  top: 1rem;
-}
 
 .services__cards {
   display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-top: 9rem;
 }
 .services__cards__card {
-  flex-basis: calc(98% / 4);
+  flex-basis: calc(97% / 4);
+  padding: 2rem 1rem;
+  overflow: hidden;
+  transition: all 0.5s ease;
 }
-.services__cards__card__icon {
+.services__cards__card__icon svg {
+  width: 4rem;
+  height: 5rem;
+  transition: all 0.5s ease;
 }
 .services__cards__card h4 {
+  font-size: 1em;
+  margin-block: 1rem;
+  text-transform: uppercase;
+  color: var(--fourth-color);
+  font-weight: 600;
 }
 .services__cards__card p {
+  font-size: 0.7em;
+  line-height: calc(0.7em * 2);
+  color: var(--third-color);
+}
+
+/* -------------------------- */
+/* SECTION 3 => OUR PORTFOLIO */
+/* -------------------------- */
+.portfolio {
+  background-color: white;
+}
+.portfolio__nav {
+  margin-top: 6rem;
+}
+.portfolio__nav__items {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  color: var(--fourth-color);
+}
+.portfolio__items {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin-top: 6rem;
+}
+.portfolio__items__item {
+  position: relative;
+  flex-basis: calc(95% / 3);
+  margin-bottom: 2.6rem;
+  overflow: hidden;
+}
+.portfolio__items__item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.562);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.portfolio__items__item img {
+  max-width: 100%;
+}
+
+/* --------------------------- */
+/* SECTION 4 => COUNT SERVICES */
+/* --------------------------- */
+.count-services {
+  background-color: var(--fifth-color);
+}
+.count-services__cards {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.count-services__cards__card {
+  flex-basis: calc(97% / 4);
+  font-size: 20px;
+  text-align: center;
+  text-transform: capitalize;
+}
+.count-services__cards__card svg {
+  width: 3.9rem;
+  height: 4.3rem;
+}
+.count-services__cards__card > h4 {
+  font-weight: 600;
+  color: var(--fourth-color);
+  font-size: 1.8rem;
+}
+.count-services__cards__card > span {
+  display: block;
+  margin-block: 10px;
+  font-weight: 700;
+  font-size: 2.5rem;
 }
 
 /* ---------- */
@@ -301,17 +404,47 @@ button {
   }
   .about__content__otherinfo__info {
     flex: 0 0 100%;
+    justify-content: space-between;
   }
   .about__wrapper > * {
     flex: 0 0 50%;
   }
+
+  /* --------------------- */
+  /* SECTION 2 => SERVICES */
+  /* --------------------- */
+  .services__cards__card {
+    flex-basis: calc(97% / 2);
+    overflow: hidden;
+  }
+
+  /* -------------------------- */
+  /* SECTION 3 => OUR PORTFOLIO */
+  /* -------------------------- */
+  .portfolio__items__item {
+    flex-basis: calc(95% / 2);
+  }
+
+  /* --------------------------- */
+  /* SECTION 4 => COUNT SERVICES */
+  /* --------------------------- */
+  .count-services__cards__card {
+    flex-basis: calc(97% / 2);
+  }
+  .count-services__cards__card:not(:last-of-type) {
+    margin-bottom: 30px;
+  }
 }
 @media (max-width: 768px) {
+  html {
+    font-size: 53%;
+  }
   /* ------------------ */
   /* SECTION 1 => ABOUT */
   /* ------------------ */
   .about__wrapper > * {
     flex: 0 0 100%;
+    text-align: center;
   }
   .about__image__wrapper {
     justify-content: center;
@@ -324,5 +457,45 @@ button {
   }
   .about__content__actions {
     justify-content: center;
+  }
+
+  /* --------------------- */
+  /* SECTION 2 => SERVICES */
+  /* --------------------- */
+  .services__cards {
+    margin-top: 5rem;
+  }
+  .services__cards__card {
+    flex-basis: 100%;
+    margin-bottom: 2rem;
+  }
+
+  /* -------------------------- */
+  /* SECTION 3 => OUR PORTFOLIO */
+  /* -------------------------- */
+  .portfolio__items__item {
+    flex-basis: 100%;
+  }
+
+  /* --------------------------- */
+  /* SECTION 4 => COUNT SERVICES */
+  /* --------------------------- */
+  .count-services__cards__card {
+    flex-basis: 100%;
+  }
+}
+
+@media (hover: hover) {
+  .services__cards__card:hover {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px rgba(133, 133, 133, 0.233);
+  }
+  .services__cards__card:hover .services__cards__card__icon svg {
+    transform: scale(1.2);
+  }
+
+  .portfolio__items__item:hover::after {
+    opacity: 1;
   }
 }
