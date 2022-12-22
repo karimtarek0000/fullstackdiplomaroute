@@ -75,7 +75,7 @@
 
       <!-- START ABOUT SECTION -->
       <section class="about">
-        <div class="about__wrapper container">
+        <div class="about__wrapper section__wrapper--global container">
           <!-- IMAGE -->
           <div class="about__image__wrapper">
             <figure class="about__image">
@@ -126,15 +126,15 @@
 
             <!-- START ACTIONS -->
             <div class="about__content__actions">
-              <button class="about__content__actions__btn">
+              <button class="about__content__actions__btn btn--hover">
                 <span class="about__content__actions__btn__title"
-                  >download cv</span
+                  >download CV</span
                 >
                 <svg class="svg">
                   <use href="./assets/icons/sprite.svg#down" />
                 </svg>
               </button>
-              <button class="about__content__actions__btn">
+              <button class="about__content__actions__btn btn--hover">
                 <span class="about__content__actions__btn__title">hire me</span>
                 <svg class="svg">
                   <use href="./assets/icons/sprite.svg#cv" />
@@ -149,9 +149,9 @@
 
       <!-- START SERVICES SECTION -->
       <section class="services">
-        <div class="services__wrapper container">
+        <div class="services__wrapper section__wrapper--global container">
           <!-- START HEAD -->
-          <div class="services__head">
+          <div class="services__head section__head--global">
             <h2>our services</h2>
             <span class="line" />
           </div>
@@ -215,9 +215,9 @@
 
       <!-- START OUR PORTFOLIO SECTION -->
       <section class="portfolio">
-        <div class="portfolio__wrapper container">
+        <div class="portfolio__wrapper section__wrapper--global container">
           <!-- START HEAD -->
-          <div class="portfolio__head">
+          <div class="portfolio__head section__head--global">
             <h2>our portfolio</h2>
             <span class="line" />
           </div>
@@ -271,7 +271,7 @@
 
       <!-- START COUNTER SERVICES SECTION -->
       <section class="count-services">
-        <div class="count-services__wrapper container">
+        <div class="count-services__wrapper section__wrapper--global container">
           <div class="count-services__cards">
             <div class="count-services__cards__card">
               <svg class="svg">
@@ -308,9 +308,9 @@
 
       <!-- START FEEDBACK SECTION -->
       <section class="feedback">
-        <div class="feedback__wrapper container">
+        <div class="feedback__wrapper section__wrapper--global container">
           <!-- START HEAD -->
-          <div class="feedback__head">
+          <div class="feedback__head section__head--global">
             <h2>client's feedback</h2>
             <span class="line" />
           </div>
@@ -340,9 +340,124 @@
             </div>
           </div>
           <!-- END CONTENT -->
+
+          <!-- START FEEDBACK ACTIONS -->
+          <div class="feedback__actions">
+            <span></span>
+            <span></span>
+          </div>
+          <!-- END FEEDBACK ACTIONS -->
         </div>
       </section>
       <!-- END FEEDBACK SECTION -->
+
+      <!-- START BLOGS SECTION -->
+      <section class="blogs">
+        <div class="blogs__wrapper section__wrapper--global container">
+          <!-- START HEAD -->
+          <div class="blogs__head section__head--global">
+            <h2>our blog</h2>
+            <span class="line" />
+          </div>
+          <!-- END HEAD -->
+
+          <!-- START CARDS -->
+          <div class="blogs__cards">
+            <div class="blogs__cards__card">
+              <figure class="blogs__cards__card__img">
+                <img src="./assets/images/blog/1.jpg" alt="1" />
+              </figure>
+              <div class="blogs__cards__card__info">
+                <span>23 November, 2015</span>
+                <h6>Web Design Blog Post</h6>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Consequuntur ea, quis magnam deserunt eius incidunt repellat
+                  molestiae.
+                </p>
+                <button>
+                  <span>read more</span>
+                  <svg>
+                    <use href="./assets/icons/sprite.svg#arrowR" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="blogs__cards__card">
+              <figure class="blogs__cards__card__img">
+                <img src="./assets/images/blog/1.jpg" alt="1" />
+              </figure>
+              <div class="blogs__cards__card__info">
+                <span>20 April, 2018</span>
+                <h6>Development Blog Post</h6>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Consequuntur ea, quis magnam deserunt eius incidunt repellat
+                  molestiae.
+                </p>
+                <button>
+                  <span>read more</span>
+                  <svg>
+                    <use href="./assets/icons/sprite.svg#arrowR" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="blogs__cards__card">
+              <figure class="blogs__cards__card__img">
+                <img src="./assets/images/blog/1.jpg" alt="1" />
+              </figure>
+              <div class="blogs__cards__card__info">
+                <span>17 May, 2017</span>
+                <h6>Full Width Blog Post</h6>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Consequuntur ea, quis magnam deserunt eius incidunt repellat
+                  molestiae.
+                </p>
+                <button>
+                  <span>read more</span>
+                  <svg>
+                    <use href="./assets/icons/sprite.svg#arrowR" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- END CARDS -->
+        </div>
+      </section>
+      <!-- END BLOGS SECTION -->
+
+      <!-- START CONTACT SECTION -->
+      <section class="contact">
+        <div class="contact__wrapper section__wrapper--global container">
+          <!-- START HEAD -->
+          <div class="blogs__head section__head--global">
+            <h2>contact us</h2>
+            <span class="line" />
+          </div>
+          <!-- END HEAD -->
+
+          <!-- START FORM -->
+          <form class="contact__form">
+            <div class="contact__form__row1">
+              <input type="text" placeholder="Name" />
+              <input type="email" placeholder="Email" />
+            </div>
+            <div class="contact__form__row2">
+              <input type="text" placeholder="Subject" />
+              <textarea placeholder="Message for me"></textarea>
+            </div>
+
+            <button class="contact__form__submit btn--hover">
+              send message
+            </button>
+          </form>
+          <!-- END FORM -->
+        </div>
+      </section>
+      <!-- END CONTACT SECTION -->
     </main>
   </body>
 </html>
