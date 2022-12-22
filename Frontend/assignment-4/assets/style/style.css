@@ -189,6 +189,15 @@ body {
   color: white;
   font-weight: 600;
 }
+.header__content__submaintitle {
+  font-weight: 300;
+  border-right: 2.2px solid white;
+  padding-inline: 1rem;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typer 1.5s infinite ease alternate-reverse;
+  will-change: animation;
+}
 .header__content__maintitle {
   font-size: 7rem;
   color: var(--main-color);
@@ -843,5 +852,17 @@ textarea:focus {
   }
   .icons svg:hover {
     fill: var(--main-color);
+  }
+}
+
+/* ---------- */
+/* ANIMATIONS */
+/* ---------- */
+@keyframes typer {
+  40% {
+    width: 29rem;
+  }
+  100% {
+    width: 19rem;
   }
 }
