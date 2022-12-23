@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fokir</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/style/style.css" />
+  </head>
+  <body>
+    <main>
+      <!-- START HEADER -->
+      <header class="header">
+        <!-- NAVBAR -->
+        <nav class="header__nav">
+          <div class="header__nav__wrapper container">
+            <!-- LOGO -->
+            <a class="header__nav__logo" href="index.html"> Fokir </a>
+            <!-- TOGGLE MENU -->
+            <button class="header__nav__toggle">
+              <svg>
+                <use href="./assets/icons/sprite.svg#burger" />
+              </svg>
+            </button>
+            <!-- NAV ITEMS -->
+            <ul class="header__nav__items">
+              <li class="header__nav__items__item">
+                <a
+                  href="#home"
+                  class="header__nav__items__item__link header__nav__items__item__link--active"
+                  >home</a
+                >
+              </li>
+              <li class="header__nav__items__item">
+                <a href="#about" class="header__nav__items__item__link"
+                  >about</a
+                >
+              </li>
+              <li class="header__nav__items__item">
+                <a href="#services" class="header__nav__items__item__link"
+                  >services</a
+                >
+              </li>
+              <li class="header__nav__items__item">
+                <a href="#portfolio" class="header__nav__items__item__link"
+                  >portfolio</a
+                >
+              </li>
+              <li class="header__nav__items__item">
+                <a href="#testimonial" class="header__nav__items__item__link">
+                  testimonial</a
+                >
+              </li>
+              <li class="header__nav__items__item">
+                <a href="#blogs" class="header__nav__items__item__link">blog</a>
+              </li>
+              <li class="header__nav__items__item">
+                <a href="#contactsus" class="header__nav__items__item__link"
+                  >contact</a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!-- HEADER -->
+        <div class="header__content" id="home">
+          <div class="header__content__wrapper container">
+            <span class="header__content__welocome">Hello i'm</span>
+            <h1 class="header__content__maintitle">alex smith</h1>
+            <p class="header__content__submaintitle">
+              Professional Web Designer
+            </p>
+          </div>
+        </div>
+      </header>
+      <!-- END HEADER -->
+
+      <!-- START ABOUT SECTION -->
+      <section class="about" id="about">
+        <div class="about__wrapper section__wrapper--global container">
+          <!-- IMAGE -->
+          <div class="about__image__wrapper">
+            <figure class="about__image">
+              <img src="./assets/images/about/profile.jpg" alt="profile" />
+              <div class="about__image__overlay">
+                <div class="icons">
+                  <a href="#">
+                    <svg>
+                      <use href="./assets/icons/sprite.svg#facebook" />
+                    </svg>
+                  </a>
+                  <a href="#">
+                    <svg>
+                      <use href="./assets/icons/sprite.svg#twitter" />
+                    </svg>
+                  </a>
+                  <a href="#">
+                    <svg>
+                      <use href="./assets/icons/sprite.svg#googleplus" />
+                    </svg>
+                  </a>
+                  <a href="#">
+                    <svg>
+                      <use href="./assets/icons/sprite.svg#github" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </figure>
+          </div>
+          <!-- CONTENT -->
+          <div class="about__content">
+            <h2 class="about__content__head">i hello,</h2>
+            <p class="about__content__desc">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+
+            <!-- START INFO -->
+            <div class="about__content__otherinfo">
+              <div class="about__content__otherinfo__info">
+                <h6>name:</h6>
+                <span>Rdam smith</span>
+              </div>
+              <div class="about__content__otherinfo__info">
+                <h6>job title:</h6>
+                <span>UI/UX Designer</span>
+              </div>
+              <div class="about__content__otherinfo__info">
+                <h6>age:</h6>
+                <span>26 Year</span>
+              </div>
+              <div class="about__content__otherinfo__info">
+                <h6>location:</h6>
+                <span>United States, US</span>
+              </div>
+              <div class="about__content__otherinfo__info">
+                <h6>freelance:</h6>
+                <span>Available</span>
+              </div>
+              <div class="about__content__otherinfo__info">
+                <h6>e-email:</h6>
+                <a href="#">Nadia420@gmail.com</a>
+              </div>
+            </div>
+            <!-- END INFO -->
+
+            <!-- START ACTIONS -->
+            <div class="about__content__actions">
+              <button class="about__content__actions__btn btn--hover">
+                <span class="about__content__actions__btn__title"
+                  >download CV</span
+                >
+                <svg class="svg">
+                  <use href="./assets/icons/sprite.svg#down" />
+                </svg>
+              </button>
+              <button class="about__content__actions__btn btn--hover">
+                <span class="about__content__actions__btn__title">hire me</span>
+                <svg class="svg">
+                  <use href="./assets/icons/sprite.svg#cv" />
+                </svg>
+              </button>
+            </div>
+            <!-- END ACTIONS -->
+          </div>
+        </div>
+      </section>
+      <!-- END ABOUT SECTION -->
+
+      <!-- START SERVICES SECTION -->
+      <section class="services" id="services">
+        <div class="services__wrapper section__wrapper--global container">
+          <!-- START HEAD -->
+          <div class="services__head section__head--global">
+            <h2>our services</h2>
+            <span class="line" />
+          </div>
+          <!-- END HEAD -->
+
+          <!-- START CARDS -->
+          <div class="services__cards">
+            <div class="services__cards__card">
+              <figure class="services__cards__card__icon">
+                <svg>
+                  <use href="./assets/icons/sprite.svg#ui-ux2" />
+                </svg>
+              </figure>
+              <h4>ui/ux design</h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
+                officia asperiores quasi reiciendis, suscipit beatae.
+              </p>
+            </div>
+            <div class="services__cards__card">
+              <figure class="services__cards__card__icon">
+                <svg>
+                  <use href="./assets/icons/sprite.svg#dev" />
+                </svg>
+              </figure>
+              <h4>APP DEVELOPMENT</h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
+                officia asperiores quasi reiciendis, suscipit beatae.
+              </p>
+            </div>
+            <div class="services__cards__card">
+              <figure class="services__cards__card__icon">
+                <svg>
+                  <use href="./assets/icons/sprite.svg#prod" />
+                </svg>
+              </figure>
+              <h4>PRODUCT DESIGN</h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
+                officia asperiores quasi reiciendis, suscipit beatae.
+              </p>
+            </div>
+            <div class="services__cards__card">
+              <figure class="services__cards__card__icon">
+                <svg>
+                  <use href="./assets/icons/sprite.svg#ui-ux2" />
+                </svg>
+              </figure>
+              <h4>web design</h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
+                officia asperiores quasi reiciendis, suscipit beatae.
+              </p>
+            </div>
+          </div>
+          <!-- END CARDS -->
+        </div>
+      </section>
+      <!-- END SERVICES SECTION -->
+
+      <!-- START OUR PORTFOLIO SECTION -->
+      <section class="portfolio" id="portfolio">
+        <div class="portfolio__wrapper section__wrapper--global container">
+          <!-- START HEAD -->
+          <div class="portfolio__head section__head--global">
+            <h2>our portfolio</h2>
+            <span class="line" />
+          </div>
+          <!-- END HEAD -->
+
+          <!-- START NAVBAR ITEMS -->
+          <nav class="portfolio__nav">
+            <ul class="portfolio__nav__items">
+              <li class="portfolio__nav__items__item">all</li>
+              <li class="portfolio__nav__items__item">graphic</li>
+              <li class="portfolio__nav__items__item">web design</li>
+              <li class="portfolio__nav__items__item">branding</li>
+            </ul>
+          </nav>
+          <!-- END NAVBAR ITEMS -->
+
+          <!-- START ITEMS -->
+          <div class="portfolio__items">
+            <div class="portfolio__items__item">
+              <img src="./assets/images/portfolio/1.jpg" alt="1" />
+            </div>
+            <div class="portfolio__items__item">
+              <img src="./assets/images/portfolio/1.jpg" alt="1" />
+            </div>
+            <div class="portfolio__items__item">
+              <img src="./assets/images/portfolio/1.jpg" alt="1" />
+            </div>
+            <div class="portfolio__items__item">
+              <img src="./assets/images/portfolio/1.jpg" alt="1" />
+            </div>
+            <div class="portfolio__items__item">
+              <img src="./assets/images/portfolio/1.jpg" alt="1" />
+            </div>
+            <div class="portfolio__items__item">
+              <img src="./assets/images/portfolio/1.jpg" alt="1" />
+            </div>
+            <div class="portfolio__items__item">
+              <img src="./assets/images/portfolio/1.jpg" alt="1" />
+            </div>
+            <div class="portfolio__items__item">
+              <img src="./assets/images/portfolio/1.jpg" alt="1" />
+            </div>
+            <div class="portfolio__items__item">
+              <img src="./assets/images/portfolio/1.jpg" alt="1" />
+            </div>
+          </div>
+          <!-- END ITEMS -->
+        </div>
+      </section>
+      <!-- END OUR PORTFOLIO SECTION -->
+
+      <!-- START COUNTER SERVICES SECTION -->
+      <section class="count-services">
+        <div class="count-services__wrapper section__wrapper--global container">
+          <div class="count-services__cards">
+            <div class="count-services__cards__card">
+              <svg class="svg">
+                <use href="./assets/icons/sprite.svg#team" />
+              </svg>
+              <span>200</span>
+              <h4>team members</h4>
+            </div>
+            <div class="count-services__cards__card">
+              <svg class="svg">
+                <use href="./assets/icons/sprite.svg#complete" />
+              </svg>
+              <span>600</span>
+              <h4>complete projects</h4>
+            </div>
+            <div class="count-services__cards__card">
+              <svg class="svg">
+                <use href="./assets/icons/sprite.svg#files" />
+              </svg>
+              <span>140</span>
+              <h4>files downloaded</h4>
+            </div>
+            <div class="count-services__cards__card">
+              <svg class="svg">
+                <use href="./assets/icons/sprite.svg#code" />
+              </svg>
+              <span>345</span>
+              <h4>lines of code</h4>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END COUNTER SERVICES SECTION -->
+
+      <!-- START FEEDBACK SECTION -->
+      <section class="feedback" id="testimonial">
+        <div class="feedback__wrapper section__wrapper--global container">
+          <!-- START HEAD -->
+          <div class="feedback__head section__head--global">
+            <h2>client's feedback</h2>
+            <span class="line" />
+          </div>
+          <!-- END HEAD -->
+
+          <!-- START CONTENT -->
+          <div class="feedback__content">
+            <figure class="feedback__content__img">
+              <img src="./assets/images/testimonial/1.jpg" alt="1" />
+            </figure>
+            <div class="feedback__content__card">
+              <h4 class="feedback__content__card__name">alex ander</h4>
+              <div class="feedback__content__address">
+                <svg>
+                  <use href="./assets/icons/sprite.svg#map" />
+                </svg>
+                <span>united</span>
+              </div>
+              <p class="feedback__content__desc">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Ratione cum magnam similique sapiente numquam placeat non
+                cupiditate nihil, laborum quam!
+              </p>
+              <svg class="feedback__content__card__ratings">
+                <use href="./assets/icons/sprite.svg#ratings" />
+              </svg>
+            </div>
+          </div>
+          <!-- END CONTENT -->
+
+          <!-- START FEEDBACK ACTIONS -->
+          <div class="feedback__actions">
+            <span></span>
+            <span></span>
+          </div>
+          <!-- END FEEDBACK ACTIONS -->
+        </div>
+      </section>
+      <!-- END FEEDBACK SECTION -->
+
+      <!-- START BLOGS SECTION -->
+      <section class="blogs" id="blogs">
+        <div class="blogs__wrapper section__wrapper--global container">
+          <!-- START HEAD -->
+          <div class="blogs__head section__head--global">
+            <h2>our blog</h2>
+            <span class="line" />
+          </div>
+          <!-- END HEAD -->
+
+          <!-- START CARDS -->
+          <div class="blogs__cards">
+            <div class="blogs__cards__card">
+              <figure class="blogs__cards__card__img">
+                <img src="./assets/images/blog/1.jpg" alt="1" />
+              </figure>
+              <div class="blogs__cards__card__info">
+                <span>23 November, 2015</span>
+                <h6>Web Design Blog Post</h6>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Consequuntur ea, quis magnam deserunt eius incidunt repellat
+                  molestiae.
+                </p>
+                <button>
+                  <span>read more</span>
+                  <svg>
+                    <use href="./assets/icons/sprite.svg#arrowR" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="blogs__cards__card">
+              <figure class="blogs__cards__card__img">
+                <img src="./assets/images/blog/1.jpg" alt="1" />
+              </figure>
+              <div class="blogs__cards__card__info">
+                <span>20 April, 2018</span>
+                <h6>Development Blog Post</h6>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Consequuntur ea, quis magnam deserunt eius incidunt repellat
+                  molestiae.
+                </p>
+                <button>
+                  <span>read more</span>
+                  <svg>
+                    <use href="./assets/icons/sprite.svg#arrowR" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="blogs__cards__card">
+              <figure class="blogs__cards__card__img">
+                <img src="./assets/images/blog/1.jpg" alt="1" />
+              </figure>
+              <div class="blogs__cards__card__info">
+                <span>17 May, 2017</span>
+                <h6>Full Width Blog Post</h6>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Consequuntur ea, quis magnam deserunt eius incidunt repellat
+                  molestiae.
+                </p>
+                <button>
+                  <span>read more</span>
+                  <svg>
+                    <use href="./assets/icons/sprite.svg#arrowR" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- END CARDS -->
+        </div>
+      </section>
+      <!-- END BLOGS SECTION -->
+
+      <!-- START CONTACT SECTION -->
+      <section class="contact" id="contactsus">
+        <div class="contact__wrapper section__wrapper--global container">
+          <!-- START HEAD -->
+          <div class="blogs__head section__head--global">
+            <h2>contact us</h2>
+            <span class="line" />
+          </div>
+          <!-- END HEAD -->
+
+          <!-- START FORM -->
+          <form class="contact__form">
+            <div class="contact__form__row1">
+              <input type="text" placeholder="Name" />
+              <input type="email" placeholder="Email" />
+            </div>
+            <div class="contact__form__row2">
+              <input type="text" placeholder="Subject" />
+              <textarea placeholder="Message for me"></textarea>
+            </div>
+
+            <button class="contact__form__submit btn--hover">
+              send message
+            </button>
+          </form>
+          <!-- END FORM -->
+        </div>
+      </section>
+      <!-- END CONTACT SECTION -->
+
+      <!-- START FOOTER -->
+      <footer class="footer">
+        <div class="footer__wrapper section__wrapper--global container">
+          <div class="icons">
+            <a href="#">
+              <svg>
+                <use href="./assets/icons/sprite.svg#facebook" />
+              </svg>
+            </a>
+            <a href="#">
+              <svg>
+                <use href="./assets/icons/sprite.svg#twitter" />
+              </svg>
+            </a>
+            <a href="#">
+              <svg>
+                <use href="./assets/icons/sprite.svg#googleplus" />
+              </svg>
+            </a>
+            <a href="#">
+              <svg>
+                <use href="./assets/icons/sprite.svg#github" />
+              </svg>
+            </a>
+          </div>
+          <p>copyright 2018 &copy; all right reserved</p>
+        </div>
+      </footer>
+      <!-- END FOOTER -->
+    </main>
+  </body>
+</html>
