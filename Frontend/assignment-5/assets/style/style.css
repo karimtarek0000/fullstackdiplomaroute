@@ -198,6 +198,7 @@ body {
 }
 .know-more__content {
   display: flex;
+  flex-flow: row wrap;
   align-items: baseline;
   gap: 10px;
   text-align: left;
@@ -293,6 +294,19 @@ body {
   html {
     font-size: 53%;
   }
+
+  /* ------------------------- */
+  /* SECTION 1 => KNOW ME MORE */
+  /* ------------------------- */
+  .know-more__content__details__btn {
+    display: block;
+    margin-inline: auto;
+  }
+  .know-more__content__info {
+    flex-basis: 100%;
+    text-align: center;
+    padding: 0;
+  }
 }
 @media (max-width: 600px) {
   html {
@@ -303,7 +317,7 @@ body {
   /* GLOBAL */
   /* ------ */
   .header__section::after {
-    transform: translateY(-50%) scale(4);
+    transform: translateY(-50%) scale(3.7);
   }
 }
 
