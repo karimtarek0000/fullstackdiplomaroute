@@ -28,6 +28,7 @@ textarea {
   --main-color-darken: #1aaa80;
   --second-color: #4c4d4d;
   --third-color: #6d757d;
+  --fourth-color: #f8f9fa;
 }
 
 html {
@@ -74,6 +75,7 @@ body {
   opacity: 0.1;
   z-index: 1;
   text-transform: uppercase;
+  font-weight: 600;
 }
 .header__section::before {
   content: "";
@@ -88,6 +90,7 @@ body {
 
 .section__wrapper {
   padding-block: 10rem;
+  text-align: center;
 }
 
 /* ----------------- */
@@ -194,9 +197,6 @@ body {
 .know-more {
   background-color: white;
 }
-.know-more__wrapper {
-  text-align: center;
-}
 .know-more__content {
   display: flex;
   flex-flow: row wrap;
@@ -279,6 +279,13 @@ body {
 }
 .know-more__counter__items li span:nth-of-type(2) {
   font-size: 1.6rem;
+}
+
+/* ---------------------- */
+/* SECTION 2 => WHAT I DO */
+/* ---------------------- */
+.what {
+  background-color: var(--fourth-color);
 }
 
 /* ---------- */
