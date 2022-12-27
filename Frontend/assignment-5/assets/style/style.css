@@ -267,7 +267,7 @@ body {
   flex-direction: column;
   flex-basis: calc(97% / 4);
   border: 1px dashed;
-  border-color: transparent rgba(0, 0, 0, 0.22) transparent transparent;
+  border-color: transparent rgba(0, 0, 0, 0.1) transparent transparent;
 }
 .know-more__counter__items li:nth-last-of-type(1) {
   border-right-color: transparent;
@@ -340,10 +340,10 @@ body {
     padding: 1.5rem;
   }
   .know-more__counter__items li:nth-of-type(even) {
-    border-color: transparent transparent transparent rgba(0, 0, 0, 0.22);
+    border-color: transparent transparent transparent rgba(0, 0, 0, 0.1);
   }
   .know-more__counter__items li:nth-of-type(-n + 2) {
-    border-bottom-color: rgba(0, 0, 0, 0.22);
+    border-bottom-color: rgba(0, 0, 0, 0.1);
   }
 }
 @media (max-width: 600px) {
