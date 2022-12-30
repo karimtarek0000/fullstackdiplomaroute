@@ -28,6 +28,7 @@ textarea {
   --main-color-darken: #1aaa80;
   --second-color: #4c4d4d;
   --third-color: #6d757d;
+  --third-darken-color: #cccccc;
   --fourth-color: #f8f9fa;
   --fourth-darken-color: #eaecef;
   --fifth-color: #dd3545;
@@ -76,7 +77,8 @@ body {
   top: 50%;
   left: 0;
   right: 0;
-  transform: translateY(-50%) scale(6);
+  transform: translateY(-50%);
+  font-size: 10vw;
   color: #585050;
   opacity: 0.1;
   z-index: 1;
@@ -498,7 +500,7 @@ body {
   overflow: hidden;
   height: 100%;
 }
-.portfolio__gallary__images img {
+.portfolio__gallary__images__image img {
   max-width: 100%;
   width: 100%;
   height: 100%;
@@ -526,6 +528,82 @@ body {
 .portfolio__gallary__images__overlay span:nth-of-type(2) {
   font-size: 1.5rem;
   color: rgb(202, 202, 202);
+}
+
+/* ------------------------- */
+/* SECTION 5 => CLIENT SPEAK */
+/* ------------------------- */
+.client-speak {
+  background-color: white;
+}
+.client-speak__content {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin-top: 10rem;
+  text-align: left;
+}
+.client-speak__content__card {
+  flex-basis: calc(97% / 2);
+  background-color: var(--fourth-color);
+  border-radius: 5px;
+  padding: 4rem;
+  font-size: 3rem;
+  text-transform: capitalize;
+}
+.client-speak__content__card__header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.client-speak__content__card__info h6 {
+  font-size: 0.6em;
+}
+.client-speak__content__card__info span {
+  font-size: 0.5em;
+  margin-top: 2px;
+  display: block;
+  color: var(--third-color);
+  font-weight: 500;
+}
+.client-speak__content__card__img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.client-speak__content__card__desc {
+  font-size: 0.5em;
+  margin-top: 1em;
+}
+.client-speak__content__card svg {
+  width: 8rem;
+  height: 1.8rem;
+  transform: scale(4.5);
+}
+.client-speak__actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4rem;
+  gap: 20px;
+}
+.client-speak__actions li {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: var(--third-darken-color);
+  outline: 1px solid white;
+  outline-offset: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+li.client-speak__actions--active {
+  outline-color: var(--third-darken-color);
+  background-color: var(--main-color-darken);
 }
 
 /* ---------- */
@@ -568,6 +646,13 @@ body {
 @media (max-width: 768px) {
   html {
     font-size: 53%;
+  }
+
+  /* ------ */
+  /* GLOBAL */
+  /* ------ */
+  .header__section::after {
+    font-size: 14vw;
   }
 
   .inner__container {
@@ -621,6 +706,9 @@ body {
     flex-basis: 100%;
   }
 
+  /* ---------------------- */
+  /* SECTION 4 => PORTFOLIO */
+  /* ---------------------- */
   .portfolio__gallary__images {
     flex-basis: 100%;
   }
@@ -630,19 +718,20 @@ body {
     font-size: 50%;
   }
 
-  /* ------ */
-  /* GLOBAL */
-  /* ------ */
-  .header__section::after {
-    transform: translateY(-50%) scale(3.7);
-  }
-
   /* ------------------------- */
   /* SECTION 1 => KNOW ME MORE */
   /* ------------------------- */
   .know-more__counter__items li {
     flex-basis: 100%;
     border-color: transparent !important;
+  }
+
+  /* ------------------------- */
+  /* SECTION 5 => CLIENT SPEAK */
+  /* ------------------------- */
+  .client-speak__content__card {
+    flex-basis: 100%;
+    margin-bottom: 1em;
   }
 }
 
@@ -654,7 +743,6 @@ body {
   .know-more__content__details__btn:hover {
     background-color: var(--main-color-darken);
   }
-
   .resume__downloadcv:hover {
     background-color: var(--third-color);
     color: white;
@@ -662,11 +750,9 @@ body {
   .resume__downloadcv:hover svg {
     fill: white;
   }
-
   .portfolio__nav li:hover {
     color: var(--main-color);
   }
-
   .portfolio__gallary__images__image:hover
     .portfolio__gallary__images__overlay {
     opacity: 1;
@@ -674,6 +760,9 @@ body {
   .portfolio__gallary__images__image:hover img {
     transform: scale(1.1);
     filter: blur(2px);
+  }
+  .client-speak__actions li:hover {
+    outline-color: var(--third-darken-color);
   }
 }
 
