@@ -29,6 +29,7 @@ textarea {
   --second-color: #4c4d4d;
   --third-color: #6d757d;
   --fourth-color: #f8f9fa;
+  --fourth-darken-color: #eaecef;
   --fifth-color: #dd3545;
 }
 
@@ -380,6 +381,81 @@ body {
   line-height: calc(0.5em * 4);
 }
 
+.resume__skills {
+  font-size: 3rem;
+  margin-top: 5rem;
+  padding-inline: 4rem;
+  text-align: left;
+}
+.resume__skills__wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin-top: 0.8em;
+}
+.resume__skills__skill {
+  flex-basis: calc(97% / 2);
+}
+.resume__skills__skill:not(:last-of-type) {
+  margin-bottom: 1.2em;
+}
+.resume__skills__skill h6 {
+  text-transform: capitalize;
+  font-weight: 500;
+  font-size: 0.6em;
+}
+.resume__skills__skill__progress,
+.resume__skills__skill__progress__inner {
+  position: relative;
+  display: block;
+  height: 1rem;
+  width: 100%;
+  border-radius: 100px;
+  background-color: var(--fourth-darken-color);
+  margin-top: 0.5em;
+}
+.resume__skills__skill__progress::before {
+  content: attr(data-pro);
+  position: absolute;
+  bottom: 1.2em;
+  inset-inline-end: 0;
+  font-size: 0.6em;
+  font-weight: 500;
+}
+.resume__skills__skill__progress__inner {
+  background-color: var(--main-color);
+}
+.resume__downloadcv {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 2px solid var(--third-color);
+  border-radius: 100px;
+  padding: 1.5rem 3.5rem;
+  margin-inline: auto;
+  font-size: 1.6rem;
+  margin-top: 5rem;
+  color: var(--third-color);
+  font-weight: 500;
+}
+.resume__downloadcv svg {
+  width: 2rem;
+  height: 2rem;
+  fill: var(--third-color);
+}
+
+/* ---------------------- */
+/* SECTION 4 => PORTFOLIO */
+/* ---------------------- */
+.portfolio {
+  background-color: var(--fourth-color);
+}
+.portfolio__wrapper {
+}
+.portfolio__nav {
+  display: flex;
+}
+
 /* ---------- */
 /* RESPONSIVE */
 /* ---------- */
@@ -473,6 +549,12 @@ body {
   .resume__categorys__category {
     flex-basis: 100%;
   }
+  .resume__skills {
+    padding-inline: 0;
+  }
+  .resume__skills__skill {
+    flex-basis: 100%;
+  }
 }
 @media (max-width: 600px) {
   html {
@@ -502,6 +584,14 @@ body {
   }
   .know-more__content__details__btn:hover {
     background-color: var(--main-color-darken);
+  }
+
+  .resume__downloadcv:hover {
+    background-color: var(--third-color);
+    color: white;
+  }
+  .resume__downloadcv:hover svg {
+    fill: white;
   }
 }
 
