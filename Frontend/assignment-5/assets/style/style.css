@@ -54,6 +54,10 @@ body {
   margin: 0 auto;
 }
 
+.inner__container {
+  padding-inline: 6rem;
+}
+
 /* ------ */
 /* GLOBAL */
 /* ------ */
@@ -294,7 +298,6 @@ body {
   flex-flow: row wrap;
   justify-content: center;
   margin-top: 10rem;
-  padding-inline: 6rem;
 }
 .what__content__card {
   display: flex;
@@ -342,7 +345,6 @@ body {
   margin-top: 10rem;
   font-size: 3rem;
   text-align: left;
-  padding-inline: 4rem;
 }
 .resume__categorys__category {
   flex-basis: calc(96% / 2);
@@ -384,7 +386,6 @@ body {
 .resume__skills {
   font-size: 3rem;
   margin-top: 5rem;
-  padding-inline: 4rem;
   text-align: left;
 }
 .resume__skills__wrapper {
@@ -450,10 +451,54 @@ body {
 .portfolio {
   background-color: var(--fourth-color);
 }
-.portfolio__wrapper {
-}
 .portfolio__nav {
   display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 15rem;
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  color: var(--third-color);
+}
+.portfolio__nav li {
+  padding-inline: 2rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.portfolio__nav--active {
+  position: relative;
+  color: var(--main-color);
+}
+.portfolio__nav--active::after {
+  content: "";
+  position: absolute;
+  bottom: -1rem;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: currentColor;
+}
+
+.portfolio__gallary {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin-top: 8rem;
+}
+.portfolio__gallary__images {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  flex-basis: calc(97% / 3);
+}
+.portfolio__gallary__images figure {
+  border-radius: 5px;
+  overflow: hidden;
+}
+.portfolio__gallary__images img {
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 /* ---------- */
@@ -493,11 +538,8 @@ body {
     justify-content: space-between;
   }
 
-  /* ---------------------- */
-  /* SECTION 2 => WHAT I DO */
-  /* ---------------------- */
-  .what__content {
-    padding-inline: 0px;
+  .portfolio__gallary__images {
+    flex-basis: calc(97% / 2);
   }
 }
 @media (max-width: 768px) {
@@ -505,6 +547,9 @@ body {
     font-size: 53%;
   }
 
+  .inner__container {
+    padding-inline: 1rem;
+  }
   /* ------------------------- */
   /* SECTION 1 => KNOW ME MORE */
   /* ------------------------- */
@@ -549,9 +594,6 @@ body {
   .resume__categorys__category {
     flex-basis: 100%;
   }
-  .resume__skills {
-    padding-inline: 0;
-  }
   .resume__skills__skill {
     flex-basis: 100%;
   }
@@ -592,6 +634,10 @@ body {
   }
   .resume__downloadcv:hover svg {
     fill: white;
+  }
+
+  .portfolio__nav li:hover {
+    color: var(--main-color);
   }
 }
 
