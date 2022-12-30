@@ -735,6 +735,27 @@ textarea::placeholder {
 }
 
 /* ---------- */
+/* SCROLL TOP */
+/* ---------- */
+.scrollTop {
+  position: fixed;
+  bottom: 1rem;
+  inset-inline-end: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  background-color: var(--third-darken-color);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.scrollTop svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+/* ---------- */
 /* RESPONSIVE */
 /* ---------- */
 @media (max-width: 992px) {
