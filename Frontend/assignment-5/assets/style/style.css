@@ -482,23 +482,50 @@ body {
 .portfolio__gallary {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
   margin-top: 8rem;
+}
+.portfolio__gallary__images__wrapper {
+  padding: 0.8rem;
 }
 .portfolio__gallary__images {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  flex-basis: calc(97% / 3);
+  flex-basis: calc(100% / 3);
 }
-.portfolio__gallary__images figure {
+.portfolio__gallary__images__image {
+  position: relative;
   border-radius: 5px;
   overflow: hidden;
+  height: 100%;
 }
 .portfolio__gallary__images img {
   max-width: 100%;
   width: 100%;
   height: 100%;
+  transition: all 0.4s ease;
+}
+.portfolio__gallary__images__overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  text-transform: capitalize;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+.portfolio__gallary__images__overlay span:nth-of-type(1) {
+  font-size: 2rem;
+}
+.portfolio__gallary__images__overlay span:nth-of-type(2) {
+  font-size: 1.5rem;
+  color: rgb(202, 202, 202);
 }
 
 /* ---------- */
@@ -536,10 +563,6 @@ body {
   }
   .header__nav__wrapper {
     justify-content: space-between;
-  }
-
-  .portfolio__gallary__images {
-    flex-basis: calc(97% / 2);
   }
 }
 @media (max-width: 768px) {
@@ -597,6 +620,10 @@ body {
   .resume__skills__skill {
     flex-basis: 100%;
   }
+
+  .portfolio__gallary__images {
+    flex-basis: 100%;
+  }
 }
 @media (max-width: 600px) {
   html {
@@ -638,6 +665,15 @@ body {
 
   .portfolio__nav li:hover {
     color: var(--main-color);
+  }
+
+  .portfolio__gallary__images__image:hover
+    .portfolio__gallary__images__overlay {
+    opacity: 1;
+  }
+  .portfolio__gallary__images__image:hover img {
+    transform: scale(1.1);
+    filter: blur(2px);
   }
 }
 
