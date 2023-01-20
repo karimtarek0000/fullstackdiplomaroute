@@ -2,18 +2,58 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-/* Global  */
+/* ------- */
+/* GLOBAL  */
+/* ------- */
 @media (min-width: 1200px) {
   .container {
     width: 1170px;
   }
 }
-
-.main-title {
-  text-align: center;
-  position: relative;
-  margin-bottom: 50px;
+section {
+  padding-block: 80px;
 }
+
+/* ------------- */
+/* START NAVBAR  */
+/* ------------- */
+.nav-link {
+  position: relative;
+  padding-block: 5px;
+  padding-inline: 0 !important;
+  color: white;
+}
+.nav-link::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  transition: width 0.5s;
+}
+.nav-link.active::before {
+  width: 100%;
+}
+.social-media-icons li {
+  width: 30px;
+  height: 30px;
+}
+/* ----------- */
+/* END NAVBAR  */
+/* ----------- */
+
+/* ------------ */
+/* START HEADER */
+/* ------------ */
+.header {
+  background: url("../images/bg.jpg") center no-repeat;
+  background-size: cover;
+}
+/* ---------- */
+/* END HEADER */
+/* ---------- */
 
 /* ----------- */
 /* START ABOUT */
@@ -70,177 +110,146 @@ body {
   width: 50px;
   height: 50px;
   background-color: #f4f4f4;
+  transition: 0.3s;
+}
+.services__card:hover .services__icon {
+  background-color: black;
+  color: white;
 }
 .services__desc {
   color: #748182;
   font-size: 15px;
 }
+/* ------------ */
+/* END SERVICES */
+/* ------------ */
 
-section {
-  padding-block: 70px;
+/* --------------- */
+/* START PORTFOLIO */
+/* --------------- */
+.portfolio {
+  background-color: #ffffff;
 }
-
-.main-title h2 {
-  font-weight: 900;
-}
-
-.main-title::after {
-  content: "";
-  position: absolute;
-  top: calc(100% + 20px);
-  left: 50%;
-  transform: translateX(-50%);
-  width: 30px;
-  height: 5px;
-  background-color: #09c;
-}
-
-/* NavBar  */
-.nav-link {
+.portfolio__nav li {
   position: relative;
-  padding-block: 5px;
-  padding-inline: 0 !important;
-  color: white;
 }
-
-.nav-link::before {
+.portfolio__nav li.active::after {
   content: "";
   position: absolute;
-  top: calc(100%);
   left: 0;
-  width: 0;
-  height: 3px;
-  background-color: #fff;
-  transition: width 0.5s;
+  right: 0;
+  bottom: -5px;
+  height: 2px;
+  background-color: black;
 }
-
-.nav-link.active::before {
-  width: 100%;
+.portfolio__overlay {
+  top: 5px;
+  bottom: 5px;
+  left: 5px;
+  right: 5px;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.5s ease;
 }
-
-.social-media-icons li {
+.overlay__title {
+  transform: translateY(-35px);
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+.portfolio__icons li {
   width: 30px;
   height: 30px;
+  background-color: black;
+  cursor: pointer;
 }
-
-/* START HEADER */
-.header {
-  background: url("../images/bg.jpg") center no-repeat;
-  background-size: cover;
+.portfolio__card:hover .portfolio__overlay {
+  transform: translateY(0);
+  opacity: 0.9;
 }
-/* END HEADER */
+.portfolio__card:hover .overlay__title {
+  transform: translateY(0);
+  opacity: 1;
+}
+/* ------------- */
+/* END PORTFOLIO */
+/* ------------- */
 
-/* <!-- =========== Start SERVICES   =========== --> */
-.services .card span {
-  display: flex;
-  width: 100px;
-  height: 100px;
-  margin: auto;
-  justify-content: center;
-  align-items: center;
+/* ------------------ */
+/* START TESTIMONIALS */
+/* ------------------ */
+.testimonials {
+  background-color: #f7f7f7;
+}
+/* ---------------- */
+/* END TESTIMONIALS */
+/* ---------------- */
+
+/* -------------- */
+/* START OUR BLOG */
+/* -------------- */
+.our-blog {
+  background-color: #f7f7f7;
+}
+.our-blog__card {
+  box-shadow: 0px 10px 30px -8px rgb(0 0 0 / 10%);
+}
+.our-blog__link {
+  text-decoration: none;
+  padding-bottom: 3px;
+  border-bottom: 2px solid black;
+}
+/* ------------ */
+/* END OUR BLOG */
+/* ------------ */
+
+/* ----------------- */
+/* START CONTACTS US */
+/* ----------------- */
+.contacts-us__icon {
+  width: 70px;
+  height: 70px;
+  background-color: #f4f4f4;
+  transition: 0.3s;
+}
+.contacts-us__icon:hover {
+  background-color: black;
+  color: white;
+}
+/* --------------- */
+/* END CONTACTS US */
+/* --------------- */
+
+/* ------------------- */
+/* START CUSTOM SLIDER */
+/* ------------------- */
+.carousel-indicators {
+  margin-bottom: -2rem;
+}
+.carousel-indicators [data-bs-target] {
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
-  font-size: 30px;
-  transition: all 0.5s;
-  box-shadow: 0 0 0 10px #09c;
-  margin-bottom: 10px;
+  background-color: #b5b5b5;
 }
-
-.services .card {
-  padding-block: 20px;
+.carousel-indicators [data-bs-target].active {
+  background-color: #869791;
 }
+/* ----------------- */
+/* END CUSTOM SLIDER */
+/* ----------------- */
 
-.services .card:hover span {
-  box-shadow: 0 0 0 10px rgba(0, 153, 204, 0.316);
-  background-color: #09c;
-  color: #fff;
+/* ----------------- */
+/* START CUSTOM FORM */
+/* ----------------- */
+.form-control {
+  background-color: #f4f4f4 !important;
 }
-
-.services .counter {
-  background: url("../images/bg.jpg") center fixed no-repeat;
-  background-size: cover;
+.form-control:focus {
+  box-shadow: none !important;
 }
-
-.services .counter .layer span {
-  outline: 10px solid rgba(0, 153, 204, 0.317);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  margin: 30px auto;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
+textarea.form-control {
+  min-height: 200px;
 }
-
-/* <!-- =========== End SERVICES   =========== --> */
-
-/* <!-- =========== Start PORTFOLIO   =========== --> */
-
-.portfolio .card img {
-  filter: grayscale(100%);
-  transition: all 0.5s;
-}
-
-.portfolio .card:hover img {
-  filter: grayscale(0%);
-  transform: scale(1.2);
-}
-/* <!-- =========== End PORTFOLIO   =========== --> */
-
-/* <!-- =========== Start slider   =========== --> */
-.slider {
-  background: url("../images/overlay-bg.jpg") center fixed no-repeat;
-  background-size: cover;
-  padding-block: 0;
-}
-
-.slider .carousel-indicators [data-bs-target] {
-  text-indent: unset;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  overflow: hidden;
-}
-
-.slider .carousel-indicators {
-  bottom: -30px;
-}
-
-.slider .carousel-item img,
-.slider .carousel-item h3,
-.slider .carousel-item p {
-  transform: scale(0);
-  transition: 1s;
-}
-
-.slider .carousel-item.active img,
-.slider .carousel-item.active h3,
-.slider .carousel-item.active p {
-  transform: scale(1);
-}
-/* <!-- =========== End slider   =========== --> */
-
-/* <!-- =========== Start Contact   =========== --> */
-.contact {
-  background: url("../images/overlay-bg.jpg") center fixed no-repeat;
-  background-size: cover;
-}
-
-.contact .social {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding-left: 0;
-}
-
-.contact .social li {
-  width: 40px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 4px solid #09c;
-  border-radius: 50%;
-}
-/* <!-- =========== End Contact   =========== --> */
+/* --------------- */
+/* END CUSTOM FORM */
+/* --------------- */
