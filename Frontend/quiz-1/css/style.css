@@ -1,0 +1,222 @@
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Global  */
+.main-title {
+  text-align: center;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.about__maintitle {
+  color: #748182;
+}
+.about__subtitles {
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.about__image::after {
+  content: "";
+  width: 80%;
+  height: 80%;
+  position: absolute;
+  left: 0px;
+  bottom: -30px;
+  background-image: url("../images/dots.png");
+  background-repeat: repeat;
+  z-index: -1;
+}
+.about__btn {
+  font-size: 13px;
+}
+.about__btn--1,
+.about__btn--2 {
+  transition: 0.3s;
+}
+.about__btn--1:hover {
+  background-color: white !important;
+  color: black !important;
+}
+.about__btn--2:hover {
+  background-color: black !important;
+  color: white !important;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+section {
+  padding-block: 70px;
+}
+
+.main-title h2 {
+  font-weight: 900;
+}
+
+.main-title::after {
+  content: "";
+  position: absolute;
+  top: calc(100% + 20px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 5px;
+  background-color: #09c;
+}
+
+/* NavBar  */
+.nav-link {
+  position: relative;
+  padding-block: 5px;
+  padding-inline: 0 !important;
+  color: white;
+}
+
+.nav-link::before {
+  content: "";
+  position: absolute;
+  top: calc(100%);
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: #fff;
+  transition: width 0.5s;
+}
+
+.nav-link.active::before {
+  width: 40px;
+}
+
+.social-media-icons li {
+  width: 30px;
+  height: 30px;
+}
+
+/* START HEADER */
+.header {
+  background: url("../images/bg.jpg") center no-repeat;
+  background-size: cover;
+}
+/* END HEADER */
+
+/* <!-- =========== Start SERVICES   =========== --> */
+.services .card span {
+  display: flex;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 30px;
+  transition: all 0.5s;
+  box-shadow: 0 0 0 10px #09c;
+  margin-bottom: 10px;
+}
+
+.services .card {
+  padding-block: 20px;
+}
+
+.services .card:hover span {
+  box-shadow: 0 0 0 10px rgba(0, 153, 204, 0.316);
+  background-color: #09c;
+  color: #fff;
+}
+
+.services .counter {
+  background: url("../images/bg.jpg") center fixed no-repeat;
+  background-size: cover;
+}
+
+.services .counter .layer span {
+  outline: 10px solid rgba(0, 153, 204, 0.317);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 30px auto;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+/* <!-- =========== End SERVICES   =========== --> */
+
+/* <!-- =========== Start PORTFOLIO   =========== --> */
+
+.portfolio .card img {
+  filter: grayscale(100%);
+  transition: all 0.5s;
+}
+
+.portfolio .card:hover img {
+  filter: grayscale(0%);
+  transform: scale(1.2);
+}
+/* <!-- =========== End PORTFOLIO   =========== --> */
+
+/* <!-- =========== Start slider   =========== --> */
+.slider {
+  background: url("../images/overlay-bg.jpg") center fixed no-repeat;
+  background-size: cover;
+  padding-block: 0;
+}
+
+.slider .carousel-indicators [data-bs-target] {
+  text-indent: unset;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.slider .carousel-indicators {
+  bottom: -30px;
+}
+
+.slider .carousel-item img,
+.slider .carousel-item h3,
+.slider .carousel-item p {
+  transform: scale(0);
+  transition: 1s;
+}
+
+.slider .carousel-item.active img,
+.slider .carousel-item.active h3,
+.slider .carousel-item.active p {
+  transform: scale(1);
+}
+/* <!-- =========== End slider   =========== --> */
+
+/* <!-- =========== Start Contact   =========== --> */
+.contact {
+  background: url("../images/overlay-bg.jpg") center fixed no-repeat;
+  background-size: cover;
+}
+
+.contact .social {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-left: 0;
+}
+
+.contact .social li {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 4px solid #09c;
+  border-radius: 50%;
+}
+/* <!-- =========== End Contact   =========== --> */
