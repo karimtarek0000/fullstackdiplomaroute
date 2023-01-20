@@ -1,14 +1,23 @@
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 /* Global  */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
 .main-title {
   text-align: center;
   position: relative;
   margin-bottom: 50px;
 }
 
+/* ----------- */
+/* START ABOUT */
+/* ----------- */
 .about__maintitle {
   color: #748182;
 }
@@ -18,7 +27,6 @@ body {
   letter-spacing: 2px;
   margin-bottom: 20px;
 }
-
 .about__image::after {
   content: "";
   width: 80%;
@@ -45,11 +53,27 @@ body {
   background-color: black !important;
   color: white !important;
 }
+/* --------- */
+/* END ABOUT */
+/* --------- */
 
-@media (min-width: 1200px) {
-  .container {
-    width: 1170px;
-  }
+/* -------------- */
+/* START SERVICES */
+/* -------------- */
+.services {
+  background-color: #f7f7f7;
+}
+.services__card {
+  box-shadow: 0px 10px 30px -8px rgb(0 0 0 / 10%);
+}
+.services__icon {
+  width: 50px;
+  height: 50px;
+  background-color: #f4f4f4;
+}
+.services__desc {
+  color: #748182;
+  font-size: 15px;
 }
 
 section {
@@ -91,7 +115,7 @@ section {
 }
 
 .nav-link.active::before {
-  width: 40px;
+  width: 100%;
 }
 
 .social-media-icons li {
