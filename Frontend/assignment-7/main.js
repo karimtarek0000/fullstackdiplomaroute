@@ -103,3 +103,29 @@
 
 // Question 12
 // -----------
+// alert("Enter marks of five subjects");
+// const num1 = +window.prompt("Number 1");
+// const num2 = +window.prompt("Number 2");
+// const num3 = +window.prompt("Number 3");
+// const num4 = +window.prompt("Number 4");
+// const num5 = +window.prompt("Number 5");
+// const total = num1 + num2 + num3 + num4 + num5;
+// const average = total / 5;
+// console.log("Total: ", total);
+// console.log("Average: ", average);
+
+// Question 13
+// -----------
+// const monthNum = prompt("Input month number");
+
+// switch (monthNum) {
+//   case "1":
+//     console.log("Days in Month: 31");
+//     break;
+//   case "2":
+//     console.log("Days in Month: 28");
+//     break;
+//   case "3":
+//     console.log("Days in Month: 30");
+//     break;
+// }
