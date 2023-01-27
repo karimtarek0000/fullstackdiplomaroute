@@ -1,0 +1,57 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block: 20px;
+  height: 100vh;
+  text-align: center;
+}
+section > * {
+  margin-block: 30px;
+}
+h1 {
+  font-size: 70px;
+}
+button {
+  all: unset;
+  cursor: pointer;
+  background-color: rgb(48, 48, 199);
+  color: white;
+  padding-inline: 20px;
+  padding-block: 15px;
+  border-radius: 5px;
+}
+section > p {
+  font-size: 25px;
+}
+.quote {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+.quote p {
+  font-size: 35px;
+}
+.quote span {
+  display: block;
+  font-size: 25px;
+  margin-top: 25px;
+}
