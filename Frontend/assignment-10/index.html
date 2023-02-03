@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmarker</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0-alpha1/css/bootstrap.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
+      integrity="sha512-rqQltXRuHxtPWhktpAZxLHUVJ3Eombn3hvk9PHjV/N5DMUYnzKPC1i3ub0mEXgFzsaZNeJcoE0YHq0j/GFsdGg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <h1 class="fw-bold py-4 text-muted">Bookmarker</h1>
+      </header>
+      <hr />
+      <!-- USER INPUTS -->
+      <section
+        class="d-flex flex-column align-items-center my-2 p-5"
+        style="background-color: #eeeeee"
+      >
+        <h4 class="fw-bold">Bookmark your favorite sites</h4>
+        <!-- FORM -->
+        <form
+          id="form"
+          class="row row-cols-1 row-cols-lg-2 flex-column align-items-center w-100 gap-3 mt-4 gx-0"
+        >
+          <div class="col">
+            <label for="bookmarkname" class="form-label fw-medium"
+              >Site name</label
+            >
+            <input
+              type="text"
+              name="name"
+              class="form-control"
+              id="bookmarkname"
+              placeholder="Bookmark name"
+            />
+            <p
+              class="bg-danger text-white p-2 text-center rounded-1 d-none"
+              id="nameError"
+            >
+              You shoul'd write letters
+            </p>
+          </div>
+          <div class="col">
+            <label for="siteurl" class="form-label fw-medium">Site URL</label>
+            <input
+              type="text"
+              name="url"
+              class="form-control"
+              id="siteurl"
+              placeholder="Website URL"
+            />
+            <p
+              class="bg-danger text-white p-2 text-center rounded-1 d-none"
+              id="urlError"
+            >
+              You shoul'd write url like that: http://www.example.com
+            </p>
+          </div>
+          <div class="col" id="addBookmark">
+            <button type="submit" class="btn btn-primary w-100">
+              Add new a bookmark
+            </button>
+          </div>
+          <p
+            class="bg-danger text-white p-2 text-center rounded-1 d-none"
+            id="requiredError"
+          >
+            You must enter all required inputs
+          </p>
+        </form>
+      </section>
+
+      <!-- TABLE DATA -->
+      <section>
+        <table class="table mt-4">
+          <thead>
+            <tr>
+              <th scope="col">Bookmark name</th>
+              <th scope="col">Website URL</th>
+              <th scope="col">Actions</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody"></tbody>
+        </table>
+      </section>
+
+      <footer class="border-top border-dark-subtle mt-5">
+        &copy; 2019 Bookmarker Inc.
+      </footer>
+    </main>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
