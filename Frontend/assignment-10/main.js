@@ -1,9 +1,6 @@
+const form = document.getElementById("form");
 const bookmarkName = document.getElementById("bookmarkname");
 const siteURL = document.getElementById("siteurl");
-const form = document.getElementById("form");
-const nameError = document.getElementById("nameError");
-const urlError = document.getElementById("urlError");
-const requiredError = document.getElementById("requiredError");
 const tableBody = document.getElementById("tableBody");
 
 const bookmarks = JSON.parse(localStorage.getItem("bookmarks")) || [];
@@ -65,12 +62,15 @@ function checkAllInputs() {
   });
 }
 function validateInput() {
-  const regsx = {
+  const regex = {
     name: /^[A-z]+$/,
     url: /^http[s]?(:\/\/)www\.[A-z]{3,}\.[A-z]{2,3}$/,
   };
-  const mesError = this.name === "name" ? nameError : urlError;
-  const validate = regsx[this.name].test(this.value);
+  const validate = regex[this.name].test(this.value);
+
+  const input = [...form.elements].find((el) => el.name === this.name);
+  const mesError = document.getElementById(input.id).nextElementSibling;
+
   const setStyle = validate ? "d-none" : "d-block";
   mesError.classList.remove("d-none");
   mesError.classList.add(setStyle);
