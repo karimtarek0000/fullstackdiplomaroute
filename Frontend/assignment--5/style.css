@@ -1,0 +1,66 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+}
+
+/* ACCORDION */
+.accordion {
+  display: flex;
+  justify-content: center;
+}
+.accordion__items {
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 35%;
+  list-style: none;
+}
+.accordion__items__item {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.accordion__items__item button {
+  all: unset;
+  cursor: pointer;
+  padding-block: 10px;
+  font-size: 20px;
+  background-color: #ea8686;
+}
+.accordion__items__item p {
+  background-color: #cccccc;
+  padding: 20px;
+  display: none;
+}
+
+/* MESSAGE */
+.message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.message textarea {
+  all: unset;
+  resize: none;
+  width: 40%;
+  border: 0.5px solid rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.message span {
+  font-size: 20px;
+}
