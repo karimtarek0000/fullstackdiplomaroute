@@ -11,15 +11,19 @@ html {
 }
 body {
   font-family: sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 /* ACCORDION */
 .accordion {
   display: flex;
   justify-content: center;
+  height: 20vh;
 }
 .accordion__items {
-  height: 60vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -63,4 +67,23 @@ body {
 
 .message span {
   font-size: 20px;
+}
+
+/* TIME */
+.time {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.time > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-basis: calc(98% / 4);
+}
+.time > div span:first-child {
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: bolder;
 }
